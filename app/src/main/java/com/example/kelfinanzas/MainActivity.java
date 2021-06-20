@@ -20,12 +20,12 @@ public class MainActivity extends AppCompatActivity {
             per();
         });
 
-        textview = findViewById(R.id.btn_ir_datos_perfil);
+        textview = findViewById(R.id.btn_ir_ing);
         textview.setOnClickListener(v -> {
             vering();
         });
 
-        gts = findViewById(R.id.btn_ir_datos_perfil);
+        gts = findViewById(R.id.btn_ir_gas);
         gts.setOnClickListener(v -> {
             vergts();
         });
