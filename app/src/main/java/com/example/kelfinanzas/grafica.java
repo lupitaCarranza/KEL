@@ -2,6 +2,7 @@ package com.example.kelfinanzas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import lecho.lib.hellocharts.model.Axis;
@@ -15,14 +16,15 @@ import lecho.lib.hellocharts.view.LineChartView;
 import lecho.lib.hellocharts.view.PieChartView;
 import lecho.lib.hellocharts.model.SliceValue;
 import android.graphics.Color;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainActivity extends AppCompatActivity
+public class grafica extends AppCompatActivity
 {
-    /*PieChartView pieChartView;*/
+    PieChartView pieChartView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,26 +32,32 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.grafica);
 
 
-        /*PieChartView pieChartView = findViewById(R.id.chart);
+
+        PieChartView pieChartView = findViewById(R.id.chart);
 
         pieChartView = findViewById(R.id.chart);
 
         List pieData = new ArrayList<>();
-        pieData.add(new SliceValue(15, Color.BLUE).setLabel("Q1: $10"));
-        pieData.add(new SliceValue(25, Color.GRAY).setLabel("Q2: $4"));
-        pieData.add(new SliceValue(10, Color.RED).setLabel("Q3: $18"));
-        pieData.add(new SliceValue(60, Color.MAGENTA).setLabel("Q4: $28"));
+        pieData.add(new SliceValue(61, Color.YELLOW).setLabel("Ingresos"));
+        pieData.add(new SliceValue(39, Color.BLUE).setLabel("Gastos"));
+
 
         PieChartData pieChartData = new PieChartData(pieData);
         pieChartData.setHasLabels(true).setValueLabelTextSize(14);
         pieChartData.setHasCenterCircle(true).setCenterText1("Sales in million").setCenterText1FontSize(20).setCenterText1Color(Color.parseColor("#0097A7"));
-        pieChartView.setPieChartData(pieChartData);*/
+        pieChartView.setPieChartData(pieChartData);
 
+        TextView textview;
 
+        textview = findViewById(R.id.btn_reg9);
+        textview.setOnClickListener(v -> {
+            rg();
+        });
 
+    }
 
-
-
-
+    private void rg(){
+        Intent intentrg = new Intent(grafica.this, MainActivity.class );
+        startActivity(intentrg);
     }
 }

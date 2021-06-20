@@ -30,10 +30,10 @@ public class MainActivity extends AppCompatActivity {
             vergts();
         });
 
-        /*graf = findViewById(R.id.btn_ir_grafica);
+        graf = findViewById(R.id.btn_ir_grafica);
         graf.setOnClickListener(v -> {
             vergraf();
-        });*/
+        });
     }
 
     private void per(){
@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intentvg);
     }
 
-    /*private void vergraf(){
+    private void vergraf(){
         Intent intentgraf = new Intent(MainActivity.this, grafica.class );
         startActivity(intentgraf);
-    }*/
+    }
 }

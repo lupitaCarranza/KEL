@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="">
+    >
 
     <Button
         android:id="@+id/btn_ir_datos_perfil"
@@ -16,7 +16,7 @@
         android:layout_marginEnd="5dp"
 
         android:backgroundTint="@color/teal_700"
-        android:enabled="false"
+
         android:text="Perfil"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +31,7 @@
 
         android:layout_marginTop="100dp"
         android:backgroundTint="@color/teal_700"
-        android:enabled="false"
+
         android:text="Ingresos"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,12 +45,13 @@
     <LinearLayout
         android:layout_width="300dp"
         android:layout_height="53dp"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="200dp"
         android:background="@drawable/btn_saldo"
-        android:backgroundTint="#83FF8800"
+        android:backgroundTint="@android:color/holo_orange_light"
         android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="55dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     </LinearLayout>
 
@@ -58,7 +59,7 @@
         android:id="@+id/ahorro"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="210dp"
         android:text="Ahorro $ 00.00"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -74,12 +75,13 @@
         android:layout_gravity="start"
 
         android:layout_marginTop="100dp"
-        android:backgroundTint="@color/teal_700"
-        android:enabled="false"
+        android:backgroundTint="@android:color/holo_orange_light"
+
         android:text="Gastos"
         android:textColor="@color/white"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="143dp" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_ir_datos_perfil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <Button
@@ -89,14 +91,25 @@
         android:layout_gravity="start"
         android:layout_marginStart="48dp"
         android:layout_marginEnd="48dp"
-        android:layout_marginBottom="230dp"
+        android:layout_marginBottom="100dp"
         android:backgroundTint="@color/teal_700"
-        android:enabled="false"
+
         android:text="Ver Graficos"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="295dp"
+        android:layout_height="159dp"
+        android:layout_marginTop="110dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ahorro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/f" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="15dp"
     tools:context=".registro">
 
     <include
@@ -64,10 +63,11 @@
             android:id="@+id/imageView6"
             android:layout_width="20dp"
             android:layout_height="21dp"
+            android:layout_marginBottom="230dp"
             android:src="@drawable/tel"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/telefono"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="461dp" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/imagen_email"
@@ -160,7 +160,7 @@
             android:id="@+id/id_datos"
             android:layout_width="193dp"
             android:layout_height="36dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="50dp"
             android:text="Ingresa tus datos"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -174,7 +174,6 @@
             android:layout_gravity="start"
             android:layout_marginTop="580dp"
             android:backgroundTint="@color/teal_700"
-            android:enabled="false"
             android:text="Siguiente"
             android:textColor="@color/white"
             android:textColorHint="@color/white"

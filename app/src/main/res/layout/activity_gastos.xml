@@ -19,7 +19,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="200dp"
         android:backgroundTint="@color/teal_700"
-        android:enabled="false"
+
         android:text="@string/Gastos"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,7 @@
         android:layout_marginTop="200dp"
         android:layout_marginEnd="10dp"
         android:backgroundTint="#39018786"
-        android:enabled="false"
+
         android:text="@string/Ingresos"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,7 +95,7 @@
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="80dp"
         android:backgroundTint="@color/teal_700"
-        android:enabled="false"
+
         android:text="@string/añadir"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"

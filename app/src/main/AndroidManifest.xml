@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KELFinanzas">
-        <activity android:name=".grafica" android:theme="@style/Theme.Design.Light.NoActionBar" ></activity>
-        <activity android:name=".MainActivity" android:theme="@style/Theme.Design.Light.NoActionBar"></activity>
+
+        <activity android:name=".grafica" android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity android:name=".MainActivity" android:theme="@style/Theme.Design.Light.NoActionBar"/>
         <activity android:name=".ver_gastos" android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity android:name=".ver_ingreso" android:theme="@style/Theme.Design.Light.NoActionBar" />
 
