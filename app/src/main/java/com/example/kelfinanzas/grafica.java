@@ -22,9 +22,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class grafica extends AppCompatActivity
-{
-    PieChartView pieChartView;
+public class grafica extends AppCompatActivity {
+    /*PieChartView pieChartView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +57,71 @@ public class grafica extends AppCompatActivity
 
     private void rg(){
         Intent intentrg = new Intent(grafica.this, MainActivity.class );
+        startActivity(intentrg);
+    }*/
+
+    LineChartView lineChartView;
+    String[] axisData = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept",
+            "Oct", "Nov", "Dec"};
+    int[] yAxisData = {50, 20, 15, 30, 20, 60, 15, 40, 45, 10, 90, 18};
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.grafica);
+
+
+        lineChartView = findViewById(R.id.chart);
+
+        List yAxisValues = new ArrayList();
+        List axisValues = new ArrayList();
+
+
+        Line line = new Line(yAxisValues).setColor(Color.parseColor("#9C27B0"));
+
+        for (int i = 0; i < axisData.length; i++) {
+            axisValues.add(i, new AxisValue(i).setLabel(axisData[i]));
+        }
+
+        for (int i = 0; i < yAxisData.length; i++) {
+            yAxisValues.add(new PointValue(i, yAxisData[i]));
+        }
+
+        List lines = new ArrayList();
+        lines.add(line);
+
+        LineChartData data = new LineChartData();
+        data.setLines(lines);
+
+        Axis axis = new Axis();
+        axis.setValues(axisValues);
+        axis.setTextSize(16);
+        axis.setTextColor(Color.parseColor("#03A9F4"));
+        data.setAxisXBottom(axis);
+
+        Axis yAxis = new Axis();
+        yAxis.setName("Sales in millions");
+        yAxis.setTextColor(Color.parseColor("#03A9F4"));
+        yAxis.setTextSize(16);
+        data.setAxisYLeft(yAxis);
+
+        lineChartView.setLineChartData(data);
+        Viewport viewport = new Viewport(lineChartView.getMaximumViewport());
+        viewport.top = 110;
+        lineChartView.setMaximumViewport(viewport);
+        lineChartView.setCurrentViewport(viewport);
+
+        TextView textview;
+
+        textview = findViewById(R.id.btn_reg9);
+        textview.setOnClickListener(v -> {
+            rg();
+        });
+
+    }
+
+    private void rg() {
+        Intent intentrg = new Intent(grafica.this, MainActivity.class);
         startActivity(intentrg);
     }
 }

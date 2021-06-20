@@ -8,7 +8,7 @@
         android:id="@+id/my_toolbar"
         layout="@layout/activity_toolbar" />
 
-    <lecho.lib.hellocharts.view.PieChartView
+    <lecho.lib.hellocharts.view.LineChartView
         android:id="@+id/chart"
         android:layout_width="387dp"
         android:layout_height="520dp"
